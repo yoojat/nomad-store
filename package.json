@@ -1,0 +1,19 @@
+{
+  "name": "nomad-store2",
+  "version": "1.0.0",
+  "description": "eCommerce PWA Built with NextJS and GraphCMS",
+  "main": "index.js",
+  "repository": "https://github.com/yoojat/nomad-store",
+  "author": "yoojat <yooja.ty@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^8.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  },
+  "scripts":{
+    "dev":"next",
+    "build":"next build",
+    "start":"next start"
+  }
+}
