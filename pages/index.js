@@ -2,7 +2,7 @@ import Head from "next/head";
 import PostLink from "../components/PostLink";
 
 export default () => (
-  <h1>
+  <div>
     <Head>
       <title>Home | Nomad Store</title>
     </Head>
@@ -15,5 +15,5 @@ export default () => (
         <PostLink title={"Someting else"} id={1} />
       </li>
     </ul>
-  </h1>
+  </div>
 );
