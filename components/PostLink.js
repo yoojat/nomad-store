@@ -1,15 +1,8 @@
 import Link from "next/link";
 
 export default props => (
-  <Link href={`/post?title=${props.title}`} as={`/post/${props.title}`}>
+  <Link href={`/movie?id=${props.id}`} as={`/post/${props.id}`}>
     {/* as는 실제로 유저가 보개 되는 것 */}
-    <a>
-      {props.title}
-      <style jsx global>{`
-        body {
-          background-color: red;
-        }
-      `}</style>
-    </a>
+    <a>{props.title}</a>
   </Link>
 );
