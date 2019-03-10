@@ -5,9 +5,15 @@ const Movie = props => (
     <Head>
       <title>{props.router.query.title} | Nomad Store</title>
     </Head>
-    <h1>{props.router.query.title}</h1>
+    <h1>{props.title}</h1>
     <a>lalalala</a>
   </div>
 );
+
+Movie.getInitialProps = async () => {
+  return {
+    movie: "loaremdfpoi"
+  };
+};
 
 export default withRouter(Movie);
