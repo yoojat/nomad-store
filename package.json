@@ -7,7 +7,6 @@
   "author": "yoojat <yooja.ty@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
     "express": "^4.16.4",
     "next": "^8.0.1",
     "react": "^16.8.2",
