@@ -24,11 +24,12 @@ export const resolvers = {
       let newCart;
       const foundProduct = cart.find(aProduct => aProduct.id === product.id);
       if (foundProduct) {
-        const cleanCart = cart.filter(aProduct => aProduct.id === product.id);
+        const cleanCart = cart.filter(aProduct => aProduct.id !== product.id);
         newCart = cleanCart;
       } else {
-        newCart = [...cart, prdocut];
+        newCart = [...cart, product];
       }
+
       cache.writeData({
         data: {
           cart: newCart
