@@ -18,6 +18,15 @@ class MyApp extends App {
     return { pageProps };
   }
 
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(result => console.log("SW registerd : ", result))
+        .catch(err => console.log("Cant register SW : ", err));
+    }
+  }
+
   render() {
     const { Component, pageProps, apollo } = this.props;
     return (
