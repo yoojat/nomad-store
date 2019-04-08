@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <meta name={"author"} content={"Yoojat"} />
+          <link rel="manifest" href={"/static/manifest.json"} />
           <link
             href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.8.1/antd.min.css"
             rel="stylesheet"
