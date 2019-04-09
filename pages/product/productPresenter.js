@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import { Button as AntButton } from "antd";
 import Button from "../../components/Button";
 import CartButton from "../../components/CartButton";
+
 export default ({ data, toggleCart }) => (
   <>
     <Head>
@@ -13,8 +14,17 @@ export default ({ data, toggleCart }) => (
       rightColumn={<CartButton />}
       leftColumn={<Button href={"/"} text="Home" />}
     />
-    <div className={"product"}>
-      <img src={data.product.photo.url} />
+    <div
+      className={"product"}
+      style={{
+        display: "grid",
+        margin: "50px 0px",
+        padding: "0px 50px,",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gridGap: "50px"
+      }}
+    >
+      <img src={data.product.photo.url} style={{ maxWidth: "100%" }} />
       <div>
         <h2>{data.product.name}</h2>
         <h3>{data.product.detail}</h3>
@@ -25,7 +35,8 @@ export default ({ data, toggleCart }) => (
             : `Add to cart(${data.product.price})`}
         </AntButton>
       </div>
-      <style jsx>
+
+      {/* <style jsx>
         {`
           .product {
             display: grid;
@@ -38,7 +49,7 @@ export default ({ data, toggleCart }) => (
             max-width: 100%;
           }
         `}
-      </style>
+      </style> */}
     </div>
   </>
 );

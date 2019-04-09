@@ -16,7 +16,8 @@
     "next-with-apollo": "^3.4.0",
     "react": "^16.8.2",
     "react-apollo": "^2.5.3",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "styled-jsx": "3.0.0"
   },
   "scripts": {
     "dev": "node server.js",

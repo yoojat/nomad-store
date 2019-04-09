@@ -3,8 +3,8 @@ import App, { Container } from "next/app";
 import React from "react";
 import withApollo from "../lib/withApollo";
 import { ApolloProvider } from "react-apollo";
-// import withNProgress from "next-nprogress";
-// import NProgressStyles from "next-nprogress/styles";
+import withNProgress from "next-nprogress";
+import NProgressStyles from "next-nprogress/styles";
 const { Footer } = Layout;
 
 class MyApp extends App {
@@ -31,7 +31,7 @@ class MyApp extends App {
     const { Component, pageProps, apollo } = this.props;
     return (
       <Container>
-        {/* <NProgressStyles color="black" spinner={true} /> */}
+        <NProgressStyles color="black" spinner={true} />
         <ApolloProvider client={apollo}>
           <Layout>
             <Component {...pageProps} />
@@ -43,4 +43,4 @@ class MyApp extends App {
   }
 }
 
-export default withApollo(MyApp);
+export default withNProgress()(withApollo(MyApp));
